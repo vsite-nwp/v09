@@ -3,7 +3,7 @@
 
 #include "stdafx.h"
 #include "v9.h"
-/*** NWP V9 BEGIN ***/
+/*** NWP V9 BEGIN ****/
 #include "Doc.h"
 /*** NWP V9 END ***/
 #include "PaintView.h"
