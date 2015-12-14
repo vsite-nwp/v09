@@ -22,6 +22,9 @@ BEGIN_MESSAGE_MAP(DlgView, CFormView)
 	//{{AFX_MSG_MAP(DlgView)
 	//}}AFX_MSG_MAP
 	ON_EN_KILLFOCUS(IDC_EDIT1, &DlgView::KillFocusTop)
+	ON_EN_KILLFOCUS(IDC_EDIT2, &DlgView::KillFocusTop)
+	ON_EN_KILLFOCUS(IDC_EDIT3, &DlgView::KillFocusRight)
+	ON_EN_KILLFOCUS(IDC_EDIT4, &DlgView::KillFocusBottom)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
@@ -90,7 +93,29 @@ Doc* DlgView::GetDocument() // non-debug version is inline
 
 
 
+void DlgView::KillFocusLeft()
+{
+	// TODO: Add your control notification handler code here
+	GetDocument()->UpdateAllViews(this);
+}
+
+
 void DlgView::KillFocusTop()
 {
 	// TODO: Add your control notification handler code here
+	GetDocument()->UpdateAllViews(this);
+}
+
+
+void DlgView::KillFocusRight()
+{
+	// TODO: Add your control notification handler code here
+	GetDocument()->UpdateAllViews(this);
+}
+
+
+void DlgView::KillFocusBottom()
+{
+	// TODO: Add your control notification handler code here
+	GetDocument()->UpdateAllViews(this);
 }
