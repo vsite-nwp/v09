@@ -61,10 +61,7 @@ public:
 	CString TopEdit;
 	CString RightEdit;
 	CString BottomEdit;
-	afx_msg void KillFocusLeft();
-	afx_msg void KillFocusTop();
-	afx_msg void KillFocusRight();
-	afx_msg void KillFocusBottom();
+	afx_msg void KillFocus();
 };
 
 #ifndef _DEBUG  // debug version in DlgView.cpp
