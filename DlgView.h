@@ -62,6 +62,7 @@ public:
 	CString RightEdit;
 	CString BottomEdit;
 	afx_msg void KillFocus();
+	virtual void OnUpdate(CView* /*pSender*/, LPARAM /*lHint*/, CObject* /*pHint*/);
 };
 
 #ifndef _DEBUG  // debug version in DlgView.cpp

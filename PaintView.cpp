@@ -39,6 +39,7 @@ END_MESSAGE_MAP()
 
 void PaintView::OnDraw(CDC* pDC)
 {
+	pDC->Ellipse(static_cast<Doc*>(GetDocument())->rekt);
 }
 
 /////////////////////////////////////////////////////////////////////////////
@@ -59,3 +60,10 @@ void PaintView::Dump(CDumpContext& dc) const
 /////////////////////////////////////////////////////////////////////////////
 // PaintView message handlers
 
+
+
+void PaintView::OnUpdate(CView* /*pSender*/, LPARAM /*lHint*/, CObject* /*pHint*/)
+{
+	// TODO: Add your specialized code here and/or call the base class
+	Invalidate();
+}
