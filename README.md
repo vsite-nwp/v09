@@ -1,8 +1,8 @@
 #### vježba 9
 
 Koristeći MFC napravite MDI aplikaciju koja ima dva pogleda na dokument: 
-1.	forma za unos koordinata
-2.	crtanje elipse sa zadanim koordinatama
+  1.	forma za unos koordinata
+  2.	crtanje elipse sa zadanim koordinatama
 
 ![frame](/screenshot.jpg?raw=true)
 
