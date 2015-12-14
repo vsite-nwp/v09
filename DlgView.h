@@ -56,6 +56,13 @@ protected:
 /*** NWP V9 END ***/
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
+public:
+	CString LeftEdit;
+	CString TopEdit;
+	CString RightEdit;
+	CString BottomEdit;
+	afx_msg void KillFocus();
+	virtual void OnUpdate(CView* /*pSender*/, LPARAM /*lHint*/, CObject* /*pHint*/);
 };
 
 #ifndef _DEBUG  // debug version in DlgView.cpp

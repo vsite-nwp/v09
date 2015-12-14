@@ -27,6 +27,7 @@ END_MESSAGE_MAP()
 
 Doc::Doc()
 {
+
 }
 
 Doc::~Doc()
