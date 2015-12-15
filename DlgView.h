@@ -36,6 +36,7 @@ public:
 	protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
 	virtual void OnInitialUpdate(); // called first time after construct
+
 	//}}AFX_VIRTUAL
 
 // Implementation
@@ -56,6 +57,16 @@ protected:
 /*** NWP V9 END ***/
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
+public:
+	afx_msg void OnEnKillfocusEdit1();
+	int Left;
+	int top;
+	int right;
+	int bottom;
+	afx_msg void OnEnKillfocusEdit2();
+	afx_msg void OnEnKillfocusEdit3();
+	afx_msg void OnEnKillfocusEdit4();
+	virtual void OnUpdate(CView* /*pSender*/, LPARAM /*lHint*/, CObject* /*pHint*/);
 };
 
 #ifndef _DEBUG  // debug version in DlgView.cpp

@@ -18,7 +18,6 @@ protected:
 
 // Attributes
 public:
-
 // Operations
 public:
 
@@ -43,6 +42,7 @@ protected:
 		// NOTE - the ClassWizard will add and remove member functions here.
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
+	virtual void OnUpdate(CView* /*pSender*/, LPARAM /*lHint*/, CObject* /*pHint*/);
 };
 
 /////////////////////////////////////////////////////////////////////////////
@@ -51,3 +51,4 @@ protected:
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.
 
 #endif // !defined(AFX_PAINTVIEW_H__EEE6DC9C_A9FB_402B_9907_51D9B274A363__INCLUDED_)
+

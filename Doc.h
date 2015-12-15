@@ -12,6 +12,8 @@
 
 class Doc : public CDocument
 {
+public:
+	CRect cret;
 protected: // create from serialization only
 	Doc();
 	DECLARE_DYNCREATE(Doc)
