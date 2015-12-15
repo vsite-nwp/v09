@@ -3,9 +3,7 @@
 
 #include "stdafx.h"
 #include "v9.h"
-/*** NWP V9 BEGIN ***/
 #include "Doc.h"
-/*** NWP V9 END ***/
 #include "PaintView.h"
 
 #ifdef _DEBUG
@@ -55,6 +53,13 @@ void PaintView::Dump(CDumpContext& dc) const
 	CView::Dump(dc);
 }
 #endif //_DEBUG
+
+Doc* PaintView::GetDocument()
+{
+	ASSERT(m_pDocument->IsKindOf(RUNTIME_CLASS(Doc)));
+	return (Doc*)m_pDocument;
+}
+
 
 /////////////////////////////////////////////////////////////////////////////
 // PaintView message handlers

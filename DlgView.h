@@ -51,9 +51,6 @@ protected:
 // Generated message map functions
 protected:
 	//{{AFX_MSG(DlgView)
-/*** NWP V9 BEGIN ***/
-	afx_msg void OnKillFocus();
-/*** NWP V9 END ***/
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 };

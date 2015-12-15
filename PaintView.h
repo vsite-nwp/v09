@@ -18,6 +18,7 @@ protected:
 
 // Attributes
 public:
+	Doc* GetDocument();
 
 // Operations
 public:
