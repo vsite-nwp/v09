@@ -19,10 +19,10 @@ Uputstva:
 *	u destruktoru obrišite paintTmpl
 *	u Window meni dodajte item za otvaranje novog PaintView, odgovorite na njega u klasi izvedenoj iz CWinApp (OnNewPaintView)
 *	--------------------------------------------------------------------------------------------------
-*	u dokument klasu dodajte (public) član tipa CRect (npr. rc)
-*	u DlgView napravite DDX edit kontrola na direktno na članove dokumentovog CRect
-*	u DlgView na EN_KILLFOCUS promijenite podatke dokumenta - UpdateData(true) i notificirajte ostale prozore o promjeni  - UpdateAllViews
-*	u DlgView na OnUpdate() podatke iz dokumenta postavite u kontrole - UpdateData(false)
-*	u PaintView na OnUpdate() forsirajte iscrtavanje prozora - Invalidate()
-*	u PaintView na OnDraw() nacrtajte elipsu veličine dokumentovog CRect-a
+*	u dokument klasu (`Doc`) dodajte (public) član tipa `CRect`
+*	u `DlgView` napravite DDX edit kontrola na direktno na članove dokumentovog CRect
+*	u `DlgView` na EN_KILLFOCUS promijenite podatke dokumenta - `UpdateData(true)` i notificirajte ostale prozore o promjeni  - `UpdateAllViews`
+*	u `DlgView` na `OnUpdate()` podatke iz dokumenta postavite u kontrole - `UpdateData(false)`
+*	u `PaintView` na `OnUpdate()` forsirajte iscrtavanje prozora - `Invalidate()`
+*	u `PaintView` na `OnDraw()` nacrtajte elipsu veličine dokumentovog CRect-a
  
