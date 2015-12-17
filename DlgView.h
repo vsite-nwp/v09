@@ -20,14 +20,14 @@ public:
 	//{{AFX_DATA(DlgView)
 	enum { IDD = IDD_V9_FORM };
 	//}}AFX_DATA
-
+	
 // Attributes
 public:
 	Doc* GetDocument();
 
 // Operations
 public:
-
+	
 // Overrides
 	// ClassWizard generated virtual function overrides
 	//{{AFX_VIRTUAL(DlgView)
@@ -52,10 +52,19 @@ protected:
 protected:
 	//{{AFX_MSG(DlgView)
 /*** NWP V9 BEGIN ***/
-	afx_msg void OnKillFocus();
+	
+	
 /*** NWP V9 END ***/
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
+public:
+	int Ddx;
+
+	
+	
+	afx_msg void OnEnKillfocusEdit1();
+	
+	virtual void OnUpdate(CView* /*pSender*/, LPARAM /*lHint*/, CObject* /*pHint*/);
 };
 
 #ifndef _DEBUG  // debug version in DlgView.cpp

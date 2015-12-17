@@ -25,3 +25,4 @@
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.
 
 #endif // !defined(AFX_STDAFX_H__418B3092_9DB4_4109_9BE2_9B56D3A55CDA__INCLUDED_)
+#include <afxcontrolbars.h>

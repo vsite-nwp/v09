@@ -32,6 +32,7 @@ BEGIN_MESSAGE_MAP(PaintView, CView)
 	//{{AFX_MSG_MAP(PaintView)
 		// NOTE - the ClassWizard will add and remove mapping macros here.
 	//}}AFX_MSG_MAP
+	
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
@@ -39,6 +40,7 @@ END_MESSAGE_MAP()
 
 void PaintView::OnDraw(CDC* pDC)
 {
+	pDC->Ellipse(static_cast<Doc*>(GetDocument())->rc);
 }
 
 /////////////////////////////////////////////////////////////////////////////
@@ -59,3 +61,11 @@ void PaintView::Dump(CDumpContext& dc) const
 /////////////////////////////////////////////////////////////////////////////
 // PaintView message handlers
 
+
+
+
+
+void PaintView::OnUpdate(CView* /*pSender*/, LPARAM /*lHint*/, CObject* /*pHint*/)
+{
+	Invalidate();
+}
