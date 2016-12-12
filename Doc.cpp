@@ -27,6 +27,10 @@ END_MESSAGE_MAP()
 
 Doc::Doc()
 {
+	rect.bottom = 0;
+	rect.top = 0;
+	rect.left = 0;
+	rect.right = 0;
 }
 
 Doc::~Doc()
