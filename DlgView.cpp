@@ -19,8 +19,10 @@ static char THIS_FILE[] = __FILE__;
 IMPLEMENT_DYNCREATE(DlgView, CFormView)
 
 BEGIN_MESSAGE_MAP(DlgView, CFormView)
-	//{{AFX_MSG_MAP(DlgView)
-	//}}AFX_MSG_MAP
+	ON_EN_CHANGE(IDC_EDIT1, &DlgView::OnEnChangeEdit1)
+	ON_EN_CHANGE(IDC_EDIT2, &DlgView::OnEnChangeEdit1)
+	ON_EN_CHANGE(IDC_EDIT3, &DlgView::OnEnChangeEdit1)
+	ON_EN_CHANGE(IDC_EDIT4, &DlgView::OnEnChangeEdit1)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
@@ -28,6 +30,7 @@ END_MESSAGE_MAP()
 
 DlgView::DlgView()
 	: CFormView(DlgView::IDD)
+	, GetDocumentrectleft(0)
 {
 }
 
@@ -40,6 +43,10 @@ void DlgView::DoDataExchange(CDataExchange* pDX)
 	CFormView::DoDataExchange(pDX);
 	//{{AFX_DATA_MAP(DlgView)
 	//}}AFX_DATA_MAP
+	DDX_Text(pDX, IDC_EDIT1, GetDocument()->rect.left);
+	DDX_Text(pDX, IDC_EDIT2, GetDocument()->rect.top);
+	DDX_Text(pDX, IDC_EDIT3, GetDocument()->rect.right);
+	DDX_Text(pDX, IDC_EDIT4, GetDocument()->rect.bottom);
 }
 
 BOOL DlgView::PreCreateWindow(CREATESTRUCT& cs)
@@ -78,3 +85,25 @@ Doc* DlgView::GetDocument() // non-debug version is inline
 /////////////////////////////////////////////////////////////////////////////
 // DlgView message handlers
 
+
+
+void DlgView::OnEnChangeEdit1()
+{
+	// TODO:  If this is a RICHEDIT control, the control will not
+	// send this notification unless you override the CFormView::OnInitDialog()
+	// function and call CRichEditCtrl().SetEventMask()
+	// with the ENM_CHANGE flag ORed into the mask.
+
+	// TODO:  Add your control notification handler code here
+
+	UpdateData(true);
+	GetDocument()->UpdateAllViews(this);
+}
+
+
+
+void DlgView::OnUpdate(CView* /*pSender*/, LPARAM /*lHint*/, CObject* /*pHint*/)
+{
+	// TODO: Add your specialized code here and/or call the base class
+	UpdateData(false);
+}
