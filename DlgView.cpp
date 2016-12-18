@@ -21,6 +21,10 @@ IMPLEMENT_DYNCREATE(DlgView, CFormView)
 BEGIN_MESSAGE_MAP(DlgView, CFormView)
 	//{{AFX_MSG_MAP(DlgView)
 	//}}AFX_MSG_MAP
+	ON_EN_KILLFOCUS(IDC_EDIT1, &DlgView::OnKillfocusEdit)
+	ON_EN_KILLFOCUS(IDC_EDIT2, &DlgView::OnKillfocusEdit)
+	ON_EN_KILLFOCUS(IDC_EDIT3, &DlgView::OnKillfocusEdit)
+	ON_EN_KILLFOCUS(IDC_EDIT4, &DlgView::OnKillfocusEdit)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
@@ -40,6 +44,10 @@ void DlgView::DoDataExchange(CDataExchange* pDX)
 	CFormView::DoDataExchange(pDX);
 	//{{AFX_DATA_MAP(DlgView)
 	//}}AFX_DATA_MAP
+	DDX_Text(pDX, IDC_EDIT1, GetDocument()->rect.left);
+	DDX_Text(pDX, IDC_EDIT1, GetDocument()->rect.top);
+	DDX_Text(pDX, IDC_EDIT1, GetDocument()->rect.right);
+	DDX_Text(pDX, IDC_EDIT1, GetDocument()->rect.bottom);
 }
 
 BOOL DlgView::PreCreateWindow(CREATESTRUCT& cs)
@@ -78,3 +86,16 @@ Doc* DlgView::GetDocument() // non-debug version is inline
 /////////////////////////////////////////////////////////////////////////////
 // DlgView message handlers
 
+
+
+void DlgView::OnUpdate(CView* /*pSender*/, LPARAM /*lHint*/, CObject* /*pHint*/)
+{
+	UpdateData(false);
+	// TODO: Add your specialized code here and/or call the base class
+}
+
+void DlgView::OnKillfocusEdit()
+{
+	UpdateData(true);
+	GetDocument()->UpdateAllViews(this);
+}
