@@ -2,6 +2,7 @@
 //
 /////////////////////////////////////////////////////////////////////////////
 
+#include "atltypes.h"
 #if !defined(AFX_DOC_H__50421365_675F_4868_8779_FEAF9287EBFC__INCLUDED_)
 #define AFX_DOC_H__50421365_675F_4868_8779_FEAF9287EBFC__INCLUDED_
 
@@ -45,6 +46,8 @@ protected:
 	//{{AFX_MSG(Doc)
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
+public:
+	CRect rect;
 };
 
 /////////////////////////////////////////////////////////////////////////////
