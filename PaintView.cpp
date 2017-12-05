@@ -39,7 +39,7 @@ void PaintView::OnDraw(CDC* pDC)
 {
 	Doc* pd = GetDocument();
 	ASSERT_VALID(pd);
-	pDC->Ellipse(GetDocument()->re);
+	pDC->Ellipse(pd->re);
 }
 
 /////////////////////////////////////////////////////////////////////////////
