@@ -21,6 +21,7 @@ public:
 
 // Operations
 public:
+	CRect rect;
 
 // Overrides
 	// ClassWizard generated virtual function overrides
