@@ -18,7 +18,7 @@ protected: // create from serialization only
 
 // Attributes
 public:
-
+	
 // Operations
 public:
 
@@ -27,11 +27,12 @@ public:
 	//{{AFX_VIRTUAL(Doc)
 	public:
 	virtual BOOL OnNewDocument();
-	virtual void Serialize(CArchive& ar);
+	virtual void Serialize(CArchive& ar);	
 	//}}AFX_VIRTUAL
 
 // Implementation
 public:
+	CRect pr;
 	virtual ~Doc();
 #ifdef _DEBUG
 	virtual void AssertValid() const;

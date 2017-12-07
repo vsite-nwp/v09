@@ -2,6 +2,7 @@
 //
 /////////////////////////////////////////////////////////////////////////////
 
+#include "afxwin.h"
 #if !defined(AFX_DLGVIEW_H__57BAFF3B_DDEA_4CBF_80B7_8043FF50C394__INCLUDED_)
 #define AFX_DLGVIEW_H__57BAFF3B_DDEA_4CBF_80B7_8043FF50C394__INCLUDED_
 
@@ -53,6 +54,13 @@ protected:
 	//{{AFX_MSG(DlgView)
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
+public:
+	CEdit left;
+	CEdit top;
+	CEdit right;
+	CEdit bottom;
+	afx_msg void OnEnKillfocusEdit1();
+	virtual void OnUpdate(CView* /*pSender*/, LPARAM /*lHint*/, CObject* /*pHint*/);
 };
 
 #ifndef _DEBUG  // debug version in DlgView.cpp
