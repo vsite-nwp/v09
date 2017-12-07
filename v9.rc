@@ -74,7 +74,9 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
 IDR_MAINFRAME           ICON                    "v9.ico"
+
 IDR_V9TYPE              ICON                    "Doc.ico"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -82,6 +84,7 @@ IDR_V9TYPE              ICON                    "Doc.ico"
 //
 
 IDR_MAINFRAME           BITMAP                  "Toolbar.bmp"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -212,9 +215,9 @@ BEGIN
     DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
 END
 
-IDD_V9_FORM DIALOG 0, 0, 136, 134
+IDD_V9_FORM DIALOGEX 0, 0, 136, 134
 STYLE DS_SETFONT | WS_CHILD
-FONT 8, "MS Sans Serif"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
 BEGIN
     LTEXT           "&Left:",IDC_STATIC,19,18,31,8
     EDITTEXT        IDC_EDIT1,59,16,40,14,ES_AUTOHSCROLL
@@ -290,6 +293,17 @@ BEGIN
     END
 END
 #endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_V9_FORM AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
 
 
 /////////////////////////////////////////////////////////////////////////////
