@@ -53,6 +53,14 @@ protected:
 	//{{AFX_MSG(DlgView)
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
+public:
+	afx_msg void OnChangeEdit1();
+	CString left;
+	CString top;
+	CString right;
+	CString bottom;
+	virtual void OnUpdate(CView* /*pSender*/, LPARAM /*lHint*/, CObject* /*pHint*/);
+	afx_msg void OnEnChangeEdit2();
 };
 
 #ifndef _DEBUG  // debug version in DlgView.cpp
