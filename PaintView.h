@@ -9,7 +9,6 @@
 
 /////////////////////////////////////////////////////////////////////////////
 // PaintView view
-
 class PaintView : public CView
 {
 protected:
@@ -22,7 +21,6 @@ public:
 
 // Operations
 public:
-
 // Overrides
 	// ClassWizard generated virtual function overrides
 	//{{AFX_VIRTUAL(PaintView)
@@ -44,6 +42,7 @@ protected:
 		// NOTE - the ClassWizard will add and remove member functions here.
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
+	virtual void OnUpdate(CView* /*pSender*/, LPARAM /*lHint*/, CObject* /*pHint*/);
 };
 
 /////////////////////////////////////////////////////////////////////////////
