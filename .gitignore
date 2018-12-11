@@ -1,0 +1,7 @@
+﻿/Debug
+/Release
+*.aps
+*.user
+*.opendb
+*.db
+*.suo
