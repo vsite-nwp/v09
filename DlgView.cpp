@@ -32,10 +32,6 @@ END_MESSAGE_MAP()
 
 DlgView::DlgView()
 	: CFormView(DlgView::IDD)
-	, rectLeft(0)
-	, rectTop(0)
-	, rectRight(0)
-	, rectBottom(0)
 {
 }
 
@@ -49,13 +45,9 @@ void DlgView::DoDataExchange(CDataExchange* pDX)
 	//{{AFX_DATA_MAP(DlgView)
 	//}}AFX_DATA_MAP
 	DDX_Text(pDX, IDC_EDIT1, GetDocument()->rect.left);
-	DDV_MinMaxInt(pDX, rectLeft, 0, INT_MAX);
 	DDX_Text(pDX, IDC_EDIT2, GetDocument()->rect.top);
-	DDV_MinMaxInt(pDX, rectTop, 0, INT_MAX);
 	DDX_Text(pDX, IDC_EDIT3, GetDocument()->rect.right);
-	DDV_MinMaxInt(pDX, rectRight, 0, INT_MAX);
 	DDX_Text(pDX, IDC_EDIT4, GetDocument()->rect.bottom);
-	DDV_MinMaxInt(pDX, rectBottom, 0, INT_MAX);
 }
 
 BOOL DlgView::PreCreateWindow(CREATESTRUCT& cs)
