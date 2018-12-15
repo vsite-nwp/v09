@@ -9,7 +9,6 @@
 #pragma once
 #endif // _MSC_VER > 1000
 
-
 class DlgView : public CFormView
 {
 protected: // create from serialization only
@@ -25,15 +24,15 @@ public:
 public:
 	Doc* GetDocument();
 
-// Operations
+	// Operations
 public:
 
-// Overrides
-	// ClassWizard generated virtual function overrides
-	//{{AFX_VIRTUAL(DlgView)
-	public:
+	// Overrides
+		// ClassWizard generated virtual function overrides
+		//{{AFX_VIRTUAL(DlgView)
+public:
 	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
-	protected:
+protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
 	virtual void OnInitialUpdate(); // called first time after construct
 	//}}AFX_VIRTUAL
@@ -48,16 +47,25 @@ public:
 
 protected:
 
-// Generated message map functions
+	// Generated message map functions
 protected:
 	//{{AFX_MSG(DlgView)
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
+public:
+	int left;
+	int right;
+	int bottom;
+	int top;
+	afx_msg void OnEnKillfocus();
+	void OnUpdate(CView* /*pSender*/, LPARAM /*lHint*/, CObject* /*pHint*/);
 };
 
 #ifndef _DEBUG  // debug version in DlgView.cpp
 inline Doc* DlgView::GetDocument()
-   { return (Doc*)m_pDocument; }
+{
+	return (Doc*)m_pDocument;
+}
 #endif
 
 /////////////////////////////////////////////////////////////////////////////
