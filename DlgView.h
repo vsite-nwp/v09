@@ -23,7 +23,7 @@ public:
 
 // Attributes
 public:
-	Doc* GetDocument();
+	Doc*  GetDocument();
 
 // Operations
 public:
