@@ -13,6 +13,7 @@
 class DlgView : public CFormView
 {
 protected: // create from serialization only
+	
 	DlgView();
 	DECLARE_DYNCREATE(DlgView)
 
@@ -40,6 +41,7 @@ public:
 
 // Implementation
 public:
+	
 	virtual ~DlgView();
 #ifdef _DEBUG
 	virtual void AssertValid() const;
@@ -53,6 +55,13 @@ protected:
 	//{{AFX_MSG(DlgView)
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
+public:
+	
+	
+	afx_msg void OnEnKillfocusEdit();
+	
+	
+	virtual void OnUpdate(CView* /*pSender*/, LPARAM /*lHint*/, CObject* /*pHint*/);
 };
 
 #ifndef _DEBUG  // debug version in DlgView.cpp
