@@ -15,10 +15,10 @@ class Doc : public CDocument
 protected: // create from serialization only
 	Doc();
 	DECLARE_DYNCREATE(Doc)
-
+	
 // Attributes
 public:
-
+	CRect elipsa;
 // Operations
 public:
 
