@@ -37,6 +37,11 @@ END_MESSAGE_MAP()
 
 void PaintView::OnDraw(CDC* pDC)
 {
+	pDC->Ellipse(GetDocument()->rec);
+}
+
+void PaintView::OnUpdate(CView*, LPARAM, CObject*) {
+	Invalidate();
 }
 
 /////////////////////////////////////////////////////////////////////////////

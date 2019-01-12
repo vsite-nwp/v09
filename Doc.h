@@ -26,8 +26,9 @@ public:
 	// ClassWizard generated virtual function overrides
 	//{{AFX_VIRTUAL(Doc)
 	public:
-	virtual BOOL OnNewDocument();
-	virtual void Serialize(CArchive& ar);
+		CRect rec;
+		virtual BOOL OnNewDocument();
+		virtual void Serialize(CArchive& ar);
 	//}}AFX_VIRTUAL
 
 // Implementation

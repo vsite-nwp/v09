@@ -52,6 +52,8 @@ protected:
 protected:
 	//{{AFX_MSG(DlgView)
 	//}}AFX_MSG
+	afx_msg void OnEnKillFocusEdit();
+	afx_msg virtual void OnUpdate(CView*, LPARAM, CObject*);
 	DECLARE_MESSAGE_MAP()
 };
 
