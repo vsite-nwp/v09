@@ -18,7 +18,7 @@ protected: // create from serialization only
 
 // Attributes
 public:
-
+	CRect rect;
 // Operations
 public:
 
@@ -53,3 +53,4 @@ protected:
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.
 
 #endif // !defined(AFX_DOC_H__50421365_675F_4868_8779_FEAF9287EBFC__INCLUDED_)
+
