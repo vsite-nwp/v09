@@ -5,3 +5,7 @@
 *.opendb
 *.db
 *.suo
+/.vs/v09/v16/ipch/AutoPCH/37aabc83109b495c/DLGVIEW.ipch
+/.vs/ProjectSettings.json
+/.vs/slnx.sqlite
+/.vs/VSWorkspaceState.json
