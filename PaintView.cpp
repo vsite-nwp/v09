@@ -63,7 +63,7 @@ Doc* PaintView::GetDocument()
 
 void PaintView::OnUpdate(CView*  /*pSender*/, LPARAM /*lHint*/, CObject* /*pHint*/) {
 	Invalidate();
-})
+}
 
 /////////////////////////////////////////////////////////////////////////////
 // PaintView message handlers
