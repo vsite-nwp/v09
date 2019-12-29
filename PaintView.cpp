@@ -37,6 +37,7 @@ END_MESSAGE_MAP()
 
 void PaintView::OnDraw(CDC* pDC)
 {
+	pDC->Ellipse(GetDocument()->mRect);
 }
 
 /////////////////////////////////////////////////////////////////////////////
@@ -51,6 +52,11 @@ void PaintView::AssertValid() const
 void PaintView::Dump(CDumpContext& dc) const
 {
 	CView::Dump(dc);
+}
+
+void PaintView::OnUpdate(CView * pSender, LPARAM lHint, CObject * pHint)
+{
+	Invalidate();
 }
 #endif //_DEBUG
 

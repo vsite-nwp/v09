@@ -29,10 +29,10 @@ public:
 	virtual BOOL OnNewDocument();
 	virtual void Serialize(CArchive& ar);
 	//}}AFX_VIRTUAL
-
 // Implementation
 public:
 	virtual ~Doc();
+	CRect mRect;
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;
@@ -45,6 +45,8 @@ protected:
 	//{{AFX_MSG(Doc)
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
+private:
+
 };
 
 /////////////////////////////////////////////////////////////////////////////
