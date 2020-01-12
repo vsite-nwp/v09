@@ -18,7 +18,7 @@ protected: // create from serialization only
 
 // Attributes
 public:
-
+	
 // Operations
 public:
 
@@ -37,7 +37,7 @@ public:
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;
 #endif
-
+	CRect rc;
 protected:
 
 // Generated message map functions
