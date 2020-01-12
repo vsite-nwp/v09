@@ -21,10 +21,10 @@ IMPLEMENT_DYNCREATE(DlgView, CFormView)
 BEGIN_MESSAGE_MAP(DlgView, CFormView)
 	//{{AFX_MSG_MAP(DlgView)
 	//}}AFX_MSG_MAP
-	ON_EN_KILLFOCUS(IDC_EDIT1, &DlgView::OnEnKillfocusEdit1)
-	ON_EN_KILLFOCUS(IDC_EDIT2, &DlgView::OnEnKillfocusEdit2)
-	ON_EN_KILLFOCUS(IDC_EDIT3, &DlgView::OnEnKillfocusEdit3)
-	ON_EN_KILLFOCUS(IDC_EDIT4, &DlgView::OnEnKillfocusEdit4)
+	ON_EN_KILLFOCUS(IDC_EDIT1, &DlgView::OnEnKillfocusEdit)
+	ON_EN_KILLFOCUS(IDC_EDIT2, &DlgView::OnEnKillfocusEdit)
+	ON_EN_KILLFOCUS(IDC_EDIT3, &DlgView::OnEnKillfocusEdit)
+	ON_EN_KILLFOCUS(IDC_EDIT4, &DlgView::OnEnKillfocusEdit)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
@@ -88,35 +88,13 @@ Doc* DlgView::GetDocument() // non-debug version is inline
 /////////////////////////////////////////////////////////////////////////////
 // DlgView message handlers
 
-void DlgView::OnEnKillfocusEdit1()
+void DlgView::OnEnKillfocusEdit()
 {
 	UpdateData(true);
 	GetDocument()->UpdateAllViews(this);
 }
 
-
-void DlgView::OnEnKillfocusEdit2()
-{
-	UpdateData(true);
-	GetDocument()->UpdateAllViews(this);
-}
-
-
-void DlgView::OnEnKillfocusEdit3()
-{
-	UpdateData(true);
-	GetDocument()->UpdateAllViews(this);
-}
-
-
-void DlgView::OnEnKillfocusEdit4()
-{
-	UpdateData(true);
-	GetDocument()->UpdateAllViews(this);
-}
-
-
-void DlgView::OnUpdate(CView* /*pSender*/, LPARAM /*lHint*/, CObject* /*pHint*/)
+void DlgView::OnUpdate(CView*, LPARAM, CObject*)
 {
 	UpdateData(false);
 }

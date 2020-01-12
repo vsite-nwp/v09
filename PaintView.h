@@ -22,7 +22,7 @@ public:
 
 // Operations
 public:
-
+	void OnUpdate(CView*, LPARAM, CObject*);
 // Overrides
 	// ClassWizard generated virtual function overrides
 	//{{AFX_VIRTUAL(PaintView)
@@ -43,7 +43,7 @@ protected:
 	//{{AFX_MSG(PaintView)
 		// NOTE - the ClassWizard will add and remove member functions here.
 	//}}AFX_MSG
-	DECLARE_MESSAGE_MAP()
+	DECLARE_MESSAGE_MAP();
 };
 
 /////////////////////////////////////////////////////////////////////////////
