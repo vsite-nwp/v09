@@ -33,6 +33,7 @@ public:
 // Implementation
 protected:
 	virtual ~PaintView();
+	virtual void OnUpdate(CView* pSender, LPARAM lHint, CObject* pHint);
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;

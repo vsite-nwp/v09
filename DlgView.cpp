@@ -20,6 +20,10 @@ IMPLEMENT_DYNCREATE(DlgView, CFormView)
 
 BEGIN_MESSAGE_MAP(DlgView, CFormView)
 	//{{AFX_MSG_MAP(DlgView)
+	ON_EN_KILLFOCUS(IDC_EDIT1, &DlgView::OnEnKillFocusEdit)
+	ON_EN_KILLFOCUS(IDC_EDIT2, &DlgView::OnEnKillFocusEdit)
+	ON_EN_KILLFOCUS(IDC_EDIT3, &DlgView::OnEnKillFocusEdit)
+	ON_EN_KILLFOCUS(IDC_EDIT4, &DlgView::OnEnKillFocusEdit)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -39,6 +43,10 @@ void DlgView::DoDataExchange(CDataExchange* pDX)
 {
 	CFormView::DoDataExchange(pDX);
 	//{{AFX_DATA_MAP(DlgView)
+	DDX_Text(pDX, IDC_EDIT1, GetDocument()->rectangle.left);
+	DDX_Text(pDX, IDC_EDIT2, GetDocument()->rectangle.top);
+	DDX_Text(pDX, IDC_EDIT3, GetDocument()->rectangle.right);
+	DDX_Text(pDX, IDC_EDIT4, GetDocument()->rectangle.bottom);
 	//}}AFX_DATA_MAP
 }
 
@@ -72,6 +80,15 @@ Doc* DlgView::GetDocument() // non-debug version is inline
 {
 	ASSERT(m_pDocument->IsKindOf(RUNTIME_CLASS(Doc)));
 	return (Doc*)m_pDocument;
+}
+
+void DlgView::OnUpdate(CView* pSender, LPARAM lHint, CObject* pHint) {
+	UpdateData(false);
+}
+
+void DlgView::OnEnKillFocusEdit() {
+	UpdateData(true);
+	GetDocument()->UpdateAllViews(this);
 }
 #endif //_DEBUG
 

@@ -27,7 +27,7 @@ public:
 
 // Operations
 public:
-
+	
 // Overrides
 	// ClassWizard generated virtual function overrides
 	//{{AFX_VIRTUAL(DlgView)
@@ -40,6 +40,8 @@ public:
 
 // Implementation
 public:
+	virtual void OnUpdate(CView* pSender, LPARAM lHint, CObject* pHint);
+	afx_msg void OnEnKillFocusEdit();
 	virtual ~DlgView();
 #ifdef _DEBUG
 	virtual void AssertValid() const;
