@@ -41,9 +41,10 @@ protected:
 	// Generated message map functions
 protected:
 	//{{AFX_MSG(PaintView)
-		// NOTE - the ClassWizard will add and remove member functions here.
+	virtual void Update(CView*, LPARAM, CObject*);
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
+	
 };
 
 /////////////////////////////////////////////////////////////////////////////
