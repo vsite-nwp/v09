@@ -45,7 +45,8 @@ public:
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;
 #endif
-
+	afx_msg void OnEnKillFocusEdit();
+	virtual void OnUpdate(CView*, LPARAM, CObject*);
 protected:
 
 // Generated message map functions
