@@ -21,6 +21,7 @@ public:
 	enum { IDD = IDD_V9_FORM };
 	//}}AFX_DATA
 
+
 // Attributes
 public:
 	Doc* GetDocument();
@@ -45,7 +46,9 @@ public:
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;
 #endif
-
+public:
+	afx_msg void OnEnKillfocusEdit();
+	  virtual void OnUpdate(CView*, LPARAM, CObject*);
 protected:
 
 // Generated message map functions
