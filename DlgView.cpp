@@ -21,6 +21,7 @@ IMPLEMENT_DYNCREATE(DlgView, CFormView)
 BEGIN_MESSAGE_MAP(DlgView, CFormView)
 	//{{AFX_MSG_MAP(DlgView)
 	//}}AFX_MSG_MAP
+	ON_EN_CHANGE(IDC_EDIT1, &DlgView::OnEnChangeEdit1)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
@@ -40,6 +41,10 @@ void DlgView::DoDataExchange(CDataExchange* pDX)
 	CFormView::DoDataExchange(pDX);
 	//{{AFX_DATA_MAP(DlgView)
 	//}}AFX_DATA_MAP
+	DDX_Text(pDX, IDC_EDIT1, GetDocument()->elipse.left);
+	DDX_Text(pDX, IDC_EDIT2, GetDocument()->elipse.top);
+	DDX_Text(pDX, IDC_EDIT3, GetDocument()->elipse.right);
+	DDX_Text(pDX, IDC_EDIT4, GetDocument()->elipse.bottom);
 }
 
 BOOL DlgView::PreCreateWindow(CREATESTRUCT& cs)
@@ -77,4 +82,5 @@ Doc* DlgView::GetDocument() // non-debug version is inline
 
 /////////////////////////////////////////////////////////////////////////////
 // DlgView message handlers
+
 
