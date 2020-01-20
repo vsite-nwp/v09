@@ -55,6 +55,7 @@ protected:
 	DECLARE_MESSAGE_MAP()
 public:
 	afx_msg void OnEnKillfocusEdit();
+	virtual void OnUpdate(CView*, LPARAM, CObject*);
 };
 
 #ifndef _DEBUG  // debug version in DlgView.cpp

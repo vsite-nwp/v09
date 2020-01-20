@@ -90,3 +90,7 @@ void DlgView::OnEnKillfocusEdit() {
 	UpdateData(true);
 	GetDocument()->UpdateAllViews(this);
 }
+
+void DlgView::OnUpdate(CView*, LPARAM, CObject*) {
+	UpdateData(false);
+}
