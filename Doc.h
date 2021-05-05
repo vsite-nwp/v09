@@ -18,10 +18,9 @@ protected: // create from serialization only
 
 // Attributes
 public:
-
+	CRect el;
 // Operations
 public:
-
 // Overrides
 	// ClassWizard generated virtual function overrides
 	//{{AFX_VIRTUAL(Doc)

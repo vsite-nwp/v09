@@ -36,6 +36,8 @@ public:
 	protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
 	virtual void OnInitialUpdate(); // called first time after construct
+	void OnEnKillfocus();
+	void OnUpdate(CView*, LPARAM, CObject*);
 	//}}AFX_VIRTUAL
 
 // Implementation
@@ -45,7 +47,7 @@ public:
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;
 #endif
-
+	
 protected:
 
 // Generated message map functions
