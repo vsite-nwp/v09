@@ -5,3 +5,6 @@
 *.opendb
 *.db
 *.suo
+*.ipch
+*.db-shm
+*.db-wal
