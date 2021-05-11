@@ -19,10 +19,10 @@ protected:
 // Attributes
 public:
 	Doc* GetDocument();
-
+	void OnUpdate();
 // Operations
 public:
-
+	
 // Overrides
 	// ClassWizard generated virtual function overrides
 	//{{AFX_VIRTUAL(PaintView)
