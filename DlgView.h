@@ -36,6 +36,8 @@ public:
 	protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
 	virtual void OnInitialUpdate(); // called first time after construct
+	afx_msg void OnDialogLostFocus();
+	void OnUpdate(CView*, LPARAM, CObject*);
 	//}}AFX_VIRTUAL
 
 // Implementation
