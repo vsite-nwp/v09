@@ -41,12 +41,15 @@ public:
 // Implementation
 public:
 	virtual ~DlgView();
+
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;
 #endif
 
 protected:
+	afx_msg void OnKillfocus();
+	virtual void OnUpdate(CView*, LPARAM, CObject*);
 
 // Generated message map functions
 protected:
