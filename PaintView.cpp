@@ -17,12 +17,10 @@ static char THIS_FILE[] = __FILE__;
 
 IMPLEMENT_DYNCREATE(PaintView, CView)
 
-PaintView::PaintView()
-{
+PaintView::PaintView() {
 }
 
-PaintView::~PaintView()
-{
+PaintView::~PaintView() {
 }
 
 
@@ -35,32 +33,30 @@ END_MESSAGE_MAP()
 /////////////////////////////////////////////////////////////////////////////
 // PaintView drawing
 
-void PaintView::OnDraw(CDC* pDC)
-{
-}
+void PaintView::OnDraw(CDC* pDC){
+	pDC->Ellipse(GetDocument()->rect);
+	}
 
-/////////////////////////////////////////////////////////////////////////////
-// PaintView diagnostics
+	/////////////////////////////////////////////////////////////////////////////
+	// PaintView diagnostics
 
 #ifdef _DEBUG
-void PaintView::AssertValid() const
-{
-	CView::AssertValid();
-}
+		void PaintView::AssertValid() const {
+		CView::AssertValid();
+	}
 
-void PaintView::Dump(CDumpContext& dc) const
-{
-	CView::Dump(dc);
-}
+	void PaintView::Dump(CDumpContext& dc) const {
+		CView::Dump(dc);
+	}
 #endif //_DEBUG
 
-Doc* PaintView::GetDocument()
-{
-	ASSERT(m_pDocument->IsKindOf(RUNTIME_CLASS(Doc)));
-	return (Doc*)m_pDocument;
-}
+	Doc* PaintView::GetDocument() {
+		ASSERT(m_pDocument->IsKindOf(RUNTIME_CLASS(Doc)));
+		return (Doc*)m_pDocument;
+	}
 
-
-/////////////////////////////////////////////////////////////////////////////
-// PaintView message handlers
-
+	/////////////////////////////////////////////////////////////////////////////
+	// PaintView message handlers
+	void PaintView::OnUpdate(CView*, LPARAM, CObject*) {
+		Invalidate();
+	}
