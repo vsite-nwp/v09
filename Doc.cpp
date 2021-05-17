@@ -31,6 +31,7 @@ Doc::Doc()
 
 Doc::~Doc()
 {
+
 }
 
 BOOL Doc::OnNewDocument()

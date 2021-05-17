@@ -25,15 +25,15 @@ public:
 public:
 	Doc* GetDocument();
 
-// Operations
+	// Operations
 public:
 
-// Overrides
-	// ClassWizard generated virtual function overrides
-	//{{AFX_VIRTUAL(DlgView)
-	public:
+	// Overrides
+		// ClassWizard generated virtual function overrides
+		//{{AFX_VIRTUAL(DlgView)
+public:
 	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
-	protected:
+protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
 	virtual void OnInitialUpdate(); // called first time after construct
 	//}}AFX_VIRTUAL
@@ -47,13 +47,13 @@ public:
 #endif
 
 
-protected:
+public:
 	afx_msg void OnKillfocus();
 	virtual void OnUpdate(CView*, LPARAM, CObject*);
 
 
 
-// Generated message map functions
+	// Generated message map functions
 protected:
 	//{{AFX_MSG(DlgView)
 	//}}AFX_MSG
@@ -61,8 +61,7 @@ protected:
 };
 
 #ifndef _DEBUG  // debug version in DlgView.cpp
-inline Doc* DlgView::GetDocument()
-   { return (Doc*)m_pDocument; }
+inline Doc* DlgView::GetDocument() { return (Doc*)m_pDocument; }
 #endif
 
 /////////////////////////////////////////////////////////////////////////////
