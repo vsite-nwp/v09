@@ -61,9 +61,7 @@ public:
 #ifndef _DEBUG  // debug version in DlgView.cpp
 inline Doc* DlgView::GetDocument()
    { return (Doc*)m_pDocument; }
-{
-	return (Doc*)m_pDocument;
-}
+
 #endif
 
 /////////////////////////////////////////////////////////////////////////////
