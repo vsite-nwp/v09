@@ -18,7 +18,8 @@ protected: // create from serialization only
 
 // Attributes
 public:
-
+	CRect rc;
+	//int right, left, bottom, top;
 // Operations
 public:
 
