@@ -43,6 +43,7 @@ protected:
 	//{{AFX_MSG(PaintView)
 		// NOTE - the ClassWizard will add and remove member functions here.
 	//}}AFX_MSG
+	virtual void OnUpdate(CView*, LPARAM, CObject*);
 	DECLARE_MESSAGE_MAP()
 };
 
