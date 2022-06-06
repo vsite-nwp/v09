@@ -58,6 +58,7 @@ public:
 	CRect top;
 	CRect right;
 	CRect bottom;
+	afx_msg void OnEnKillfocusEdit1();
 };
 
 #ifndef _DEBUG  // debug version in DlgView.cpp

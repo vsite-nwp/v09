@@ -21,6 +21,12 @@ IMPLEMENT_DYNCREATE(DlgView, CFormView)
 BEGIN_MESSAGE_MAP(DlgView, CFormView)
 	//{{AFX_MSG_MAP(DlgView)
 	//}}AFX_MSG_MAP
+
+	
+	ON_EN_KILLFOCUS(IDC_EDIT1, &DlgView::OnEnKillfocusEdit1)
+	ON_EN_KILLFOCUS(IDC_EDIT2, &DlgView::OnEnKillfocusEdit1)
+	ON_EN_KILLFOCUS(IDC_EDIT3, &DlgView::OnEnKillfocusEdit1)
+	ON_EN_KILLFOCUS(IDC_EDIT4, &DlgView::OnEnKillfocusEdit1)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
@@ -83,3 +89,11 @@ Doc* DlgView::GetDocument() // non-debug version is inline
 /////////////////////////////////////////////////////////////////////////////
 // DlgView message handlers
 
+
+
+void DlgView::OnEnKillfocusEdit1()
+{
+	// TODO: Add your control notification handler code here
+	UpdateData(true);
+	GetDocument()->UpdateAllViews(this);
+}
