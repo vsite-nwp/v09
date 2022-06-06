@@ -54,10 +54,6 @@ protected:
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 public:
-	CRect left;
-	CRect top;
-	CRect right;
-	CRect bottom;
 	afx_msg void OnEnKillfocusEdit1();
 	virtual void OnUpdate(CView* /*pSender*/, LPARAM /*lHint*/, CObject* /*pHint*/);
 };
