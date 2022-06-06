@@ -90,26 +90,13 @@ Doc* DlgView::GetDocument() // non-debug version is inline
 // DlgView message handlers
 
 
-
 void DlgView::OnEnKillfocusEdit1()
 {
-	// TODO: Add your control notification handler code here
 	UpdateData(true);
 	GetDocument()->UpdateAllViews(this);
 }
 
-//void OnUpdate(CView* sender, LPARAM msg, CObject* param) {
-//	UpdateData(false);
-//}
-//
-//void OnUpdate(CView*, LPARAM, CObject*) {
-//	UpdateData()
-//}
-
-//void DlgView::OnUpdate()
-
 void DlgView::OnUpdate(CView* /*pSender*/, LPARAM /*lHint*/, CObject* /*pHint*/)
 {
-	// TODO: Add your specialized code here and/or call the base class
 	UpdateData(false);
 }
