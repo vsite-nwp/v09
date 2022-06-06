@@ -40,6 +40,7 @@ void DlgView::DoDataExchange(CDataExchange* pDX)
 	CFormView::DoDataExchange(pDX);
 	//{{AFX_DATA_MAP(DlgView)
 	//}}AFX_DATA_MAP
+	
 }
 
 BOOL DlgView::PreCreateWindow(CREATESTRUCT& cs)
