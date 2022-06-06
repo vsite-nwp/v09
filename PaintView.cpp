@@ -37,6 +37,7 @@ END_MESSAGE_MAP()
 
 void PaintView::OnDraw(CDC* pDC)
 {
+	pDC->Ellipse(GetDocument()->rect);
 }
 
 /////////////////////////////////////////////////////////////////////////////
