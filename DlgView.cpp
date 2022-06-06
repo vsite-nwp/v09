@@ -40,7 +40,11 @@ void DlgView::DoDataExchange(CDataExchange* pDX)
 	CFormView::DoDataExchange(pDX);
 	//{{AFX_DATA_MAP(DlgView)
 	//}}AFX_DATA_MAP
-	
+
+	DDX_Text(pDX, IDC_EDIT1, GetDocument()->rect.left);
+	DDX_Text(pDX, IDC_EDIT2, GetDocument()->rect.top);
+	DDX_Text(pDX, IDC_EDIT3, GetDocument()->rect.right);
+	DDX_Text(pDX, IDC_EDIT4, GetDocument()->rect.bottom);
 }
 
 BOOL DlgView::PreCreateWindow(CREATESTRUCT& cs)

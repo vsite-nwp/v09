@@ -53,6 +53,11 @@ protected:
 	//{{AFX_MSG(DlgView)
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
+public:
+	CRect left;
+	CRect top;
+	CRect right;
+	CRect bottom;
 };
 
 #ifndef _DEBUG  // debug version in DlgView.cpp
