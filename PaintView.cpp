@@ -64,3 +64,10 @@ Doc* PaintView::GetDocument()
 /////////////////////////////////////////////////////////////////////////////
 // PaintView message handlers
 
+
+
+void PaintView::OnUpdate(CView* /*pSender*/, LPARAM /*lHint*/, CObject* /*pHint*/)
+{
+	// TODO: Add your specialized code here and/or call the base class
+	Invalidate();
+}
