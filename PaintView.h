@@ -16,17 +16,17 @@ protected:
 	PaintView();           // protected constructor used by dynamic creation
 	DECLARE_DYNCREATE(PaintView)
 
-// Attributes
+	// Attributes
 public:
 	Doc* GetDocument();
 
-// Operations
+	// Operations
 public:
 
-// Overrides
-	// ClassWizard generated virtual function overrides
-	//{{AFX_VIRTUAL(PaintView)
-	protected:
+	// Overrides
+		// ClassWizard generated virtual function overrides
+		//{{AFX_VIRTUAL(PaintView)
+protected:
 	virtual void OnDraw(CDC* pDC);      // overridden to draw this view
 	//}}AFX_VIRTUAL
 
@@ -43,7 +43,9 @@ protected:
 	//{{AFX_MSG(PaintView)
 		// NOTE - the ClassWizard will add and remove member functions here.
 	//}}AFX_MSG
+	virtual void OnUpdate(CView*, LPARAM, CObject*);
 	DECLARE_MESSAGE_MAP()
+
 };
 
 /////////////////////////////////////////////////////////////////////////////
