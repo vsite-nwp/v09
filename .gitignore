@@ -1,0 +1,10 @@
+﻿/Debug
+/Release
+*.aps
+*.user
+*.opendb
+*.db
+*.suo
+*.ipch
+*.db-shm
+*.db-wal
