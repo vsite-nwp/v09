@@ -37,6 +37,13 @@ END_MESSAGE_MAP()
 
 void PaintView::OnDraw(CDC* pDC)
 {
+	Doc* pDoc = GetDocument();
+	ASSERT_VALID(pDoc);
+	pDC->Ellipse(pDoc->rect);
+}
+
+void PaintView::OnUpdate() {
+	Invalidate();
 }
 
 /////////////////////////////////////////////////////////////////////////////
