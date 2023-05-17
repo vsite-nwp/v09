@@ -55,8 +55,7 @@ protected:
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 public:
-	CString left;
-	void DlgView::OnUpdate(CView*, LPARAM, CObject*) override;
+	void OnUpdate(CView*, LPARAM, CObject*) override;
 	void OnKillFocus();
 };
 

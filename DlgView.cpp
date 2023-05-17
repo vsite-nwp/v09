@@ -30,7 +30,6 @@ END_MESSAGE_MAP()
 
 DlgView::DlgView()
 	: CFormView(DlgView::IDD)
-	, left(_T(""))
 {
 }
 
@@ -84,7 +83,7 @@ Doc* DlgView::GetDocument() // non-debug version is inline
 // DlgView message handlers
 void DlgView::OnKillFocus() {
 	UpdateData(true);
-	GetDocument()->UpdateAllViews(nullptr);
+	GetDocument()->UpdateAllViews(this);
 }
 
 void DlgView::OnUpdate(CView*, LPARAM, CObject*) {
