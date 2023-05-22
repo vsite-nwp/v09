@@ -32,11 +32,17 @@ BEGIN_MESSAGE_MAP(PaintView, CView)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
+void PaintView::OnUpdate()
+{
+	Invalidate();
+}
+
 /////////////////////////////////////////////////////////////////////////////
 // PaintView drawing
 
 void PaintView::OnDraw(CDC* pDC)
 {
+	pDC->Ellipse(GetDocument()->rect);
 }
 
 /////////////////////////////////////////////////////////////////////////////

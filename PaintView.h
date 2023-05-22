@@ -43,6 +43,8 @@ protected:
 	//{{AFX_MSG(PaintView)
 		// NOTE - the ClassWizard will add and remove member functions here.
 	//}}AFX_MSG
+
+	void OnUpdate();
 	DECLARE_MESSAGE_MAP()
 };
 

@@ -50,8 +50,8 @@ protected:
 
 // Generated message map functions
 protected:
-	//{{AFX_MSG(DlgView)
-	//}}AFX_MSG
+	void onKillFocus();
+	void OnUpdate(CView* /* pSender */, LPARAM /* lHint */, CObject* /* pHint */) override;
 	DECLARE_MESSAGE_MAP()
 };
 
