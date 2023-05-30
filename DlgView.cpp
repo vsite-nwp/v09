@@ -19,8 +19,10 @@ static char THIS_FILE[] = __FILE__;
 IMPLEMENT_DYNCREATE(DlgView, CFormView)
 
 BEGIN_MESSAGE_MAP(DlgView, CFormView)
-	//{{AFX_MSG_MAP(DlgView)
-	//}}AFX_MSG_MAP
+	ON_EN_KILLFOCUS(IDC_EDIT1, &DlgView::OnKillFocus)
+	ON_EN_KILLFOCUS(IDC_EDIT2, &DlgView::OnKillFocus)
+	ON_EN_KILLFOCUS(IDC_EDIT3, &DlgView::OnKillFocus)
+	ON_EN_KILLFOCUS(IDC_EDIT4, &DlgView::OnKillFocus)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
@@ -38,8 +40,12 @@ DlgView::~DlgView()
 void DlgView::DoDataExchange(CDataExchange* pDX)
 {
 	CFormView::DoDataExchange(pDX);
-	//{{AFX_DATA_MAP(DlgView)
-	//}}AFX_DATA_MAP
+	CRect& rect = GetDocument()->rectangle;
+
+	DDX_Text(pDX, IDC_EDIT1, GetDocument()->rectangle.left);
+	DDX_Text(pDX, IDC_EDIT2, GetDocument()->rectangle.top);
+	DDX_Text(pDX, IDC_EDIT3, GetDocument()->rectangle.right);
+	DDX_Text(pDX, IDC_EDIT4, GetDocument()->rectangle.bottom);
 }
 
 BOOL DlgView::PreCreateWindow(CREATESTRUCT& cs)
@@ -77,4 +83,14 @@ Doc* DlgView::GetDocument() // non-debug version is inline
 
 /////////////////////////////////////////////////////////////////////////////
 // DlgView message handlers
+void DlgView::OnUpdate(CView*, LPARAM, CObject*) 
+{
+	UpdateData(true);
+}
+
+void DlgView::OnKillFocus() 
+{
+	UpdateData(true);
+	GetDocument()->UpdateAllViews(nullptr);
+}
 

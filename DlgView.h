@@ -41,6 +41,9 @@ public:
 // Implementation
 public:
 	virtual ~DlgView();
+	void DlgView::OnUpdate(CView*, LPARAM, CObject*) override;
+	void OnKillFocus();
+
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;
