@@ -8,3 +8,6 @@
 *.ipch
 *.db-shm
 *.db-wal
+/.vs/v9/FileContentIndex
+/.vs
+/v9.vcxproj
