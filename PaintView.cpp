@@ -40,7 +40,7 @@ void PaintView::OnDraw(CDC* pDC)
 	auto document = GetDocument();
 	pDC->Ellipse(document->rt);
 }
-void PaintView::OnUpdate()
+void PaintView::OnUpdate(CView* sender, LPARAM hint1, CObject* hint2)
 {
 	Invalidate();
 }

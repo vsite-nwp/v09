@@ -19,7 +19,7 @@ protected:
 // Attributes
 public:
 	Doc* GetDocument();
-	void OnUpdate();
+	//void OnUpdate();
 // Operations
 public:
 

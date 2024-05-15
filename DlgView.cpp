@@ -33,9 +33,9 @@ END_MESSAGE_MAP()
 DlgView::DlgView()
 	: CFormView(DlgView::IDD)
 	
-	, top(_T(""))
+	 /*top(_T(""))
 	, right(_T(""))
-	, bottom(_T(""))
+	, bottom(_T(""))*/
 {
 }
 
@@ -68,7 +68,7 @@ void DlgView::OnInitialUpdate()
 }
 void DlgView::OnUpdate(CView*, LPARAM, CObject*)
 {
-	UpdateData(true);
+	UpdateData(false);
 }
 
 void DlgView::OnEnKillfocus()
