@@ -49,6 +49,9 @@ public:
 protected:
 
 // Generated message map functions
+public:
+	afx_msg void OnEnKillfocusEdit();
+	virtual void OnUpdate(CView*, LPARAM, CObject*);
 protected:
 	//{{AFX_MSG(DlgView)
 	//}}AFX_MSG

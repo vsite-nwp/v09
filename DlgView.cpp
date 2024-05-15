@@ -21,6 +21,10 @@ IMPLEMENT_DYNCREATE(DlgView, CFormView)
 BEGIN_MESSAGE_MAP(DlgView, CFormView)
 	//{{AFX_MSG_MAP(DlgView)
 	//}}AFX_MSG_MAP
+	ON_EN_KILLFOCUS(IDC_EDIT1, &DlgView::OnEnKillfocusEdit)
+	ON_EN_KILLFOCUS(IDC_EDIT2, &DlgView::OnEnKillfocusEdit)
+	ON_EN_KILLFOCUS(IDC_EDIT3, &DlgView::OnEnKillfocusEdit)
+	ON_EN_KILLFOCUS(IDC_EDIT4, &DlgView::OnEnKillfocusEdit)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
@@ -40,6 +44,21 @@ void DlgView::DoDataExchange(CDataExchange* pDX)
 	CFormView::DoDataExchange(pDX);
 	//{{AFX_DATA_MAP(DlgView)
 	//}}AFX_DATA_MAP
+	DDX_Text(pDX, IDC_EDIT1, GetDocument()->rc.left);
+	DDX_Text(pDX, IDC_EDIT2, GetDocument()->rc.top);
+	DDX_Text(pDX, IDC_EDIT3, GetDocument()->rc.right);
+	DDX_Text(pDX, IDC_EDIT4, GetDocument()->rc.bottom);
+}
+
+void DlgView::OnEnKillfocusEdit()
+{
+	UpdateData(true);
+	GetDocument()->UpdateAllViews(this);
+}
+
+void DlgView::OnUpdate(CView* sender, LPARAM hint1, CObject* hint2)
+{
+	UpdateData(false);
 }
 
 BOOL DlgView::PreCreateWindow(CREATESTRUCT& cs)
@@ -51,7 +70,6 @@ void DlgView::OnInitialUpdate()
 {
 	CFormView::OnInitialUpdate();
 	ResizeParentToFit();
-
 }
 
 /////////////////////////////////////////////////////////////////////////////
