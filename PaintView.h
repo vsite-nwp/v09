@@ -19,7 +19,7 @@ protected:
 // Attributes
 public:
 	Doc* GetDocument();
-
+	void OnUpdate(CView*, LPARAM, CObject*) override;
 // Operations
 public:
 
