@@ -59,7 +59,7 @@ void DlgView::OnInitialUpdate()
 {
 	CFormView::OnInitialUpdate();
 	ResizeParentToFit();
-
+	GetDocument()->UpdateAllViews(this, 0, 0);
 }
 
 /////////////////////////////////////////////////////////////////////////////
