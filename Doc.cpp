@@ -27,6 +27,7 @@ END_MESSAGE_MAP()
 
 Doc::Doc()
 {
+	rect.SetRect(0, 0, 0, 0);
 }
 
 Doc::~Doc()

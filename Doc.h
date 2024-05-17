@@ -33,6 +33,7 @@ public:
 // Implementation
 public:
 	virtual ~Doc();
+	CRect rect;
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;
