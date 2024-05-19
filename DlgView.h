@@ -47,7 +47,8 @@ public:
 #endif
 
 protected:
-
+	afx_msg void OnEnKillfocusEdit();
+	virtual void OnUpdate(CView*, LPARAM, CObject*);
 // Generated message map functions
 protected:
 	//{{AFX_MSG(DlgView)
