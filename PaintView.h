@@ -46,7 +46,6 @@ protected:
 	DECLARE_MESSAGE_MAP()
 	virtual void OnUpdate(CView* /*pSender*/, LPARAM /*lHint*/, CObject* /*pHint*/);
 public:
-	virtual void OnInitialUpdate();
 };
 
 /////////////////////////////////////////////////////////////////////////////
