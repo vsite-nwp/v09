@@ -53,6 +53,9 @@ protected:
 	//{{AFX_MSG(DlgView)
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
+public:
+	afx_msg void OnKillfocus();
+	virtual void OnUpdate(CView*, LPARAM, CObject*);
 };
 
 #ifndef _DEBUG  // debug version in DlgView.cpp
