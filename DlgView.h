@@ -54,10 +54,6 @@ protected:
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 public:
-	int left_pos;
-	int top_pos;
-	int right_pos;
-	int bottom_pos;
 	afx_msg void OnKillfocus();
 	virtual void OnUpdate(CView*, LPARAM, CObject*);
 };
