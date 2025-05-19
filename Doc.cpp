@@ -27,6 +27,8 @@ END_MESSAGE_MAP()
 
 Doc::Doc()
 {
+	// Inicijalizacija CRect-a s defaultnim vrijednostima
+	m_rect.SetRect(50, 50, 200, 150);
 }
 
 Doc::~Doc()
@@ -41,8 +43,6 @@ BOOL Doc::OnNewDocument()
 	return TRUE;
 }
 
-
-
 /////////////////////////////////////////////////////////////////////////////
 // Doc serialization
 
@@ -50,9 +50,11 @@ void Doc::Serialize(CArchive& ar)
 {
 	if (ar.IsStoring())
 	{
+		ar << m_rect.left << m_rect.top << m_rect.right << m_rect.bottom;
 	}
 	else
 	{
+		ar >> m_rect.left >> m_rect.top >> m_rect.right >> m_rect.bottom;
 	}
 }
 
