@@ -35,6 +35,7 @@ END_MESSAGE_MAP()
 
 App::App()
 {
+	paintTmpl = NULL;
 }
 
 /////////////////////////////////////////////////////////////////////////////
@@ -88,6 +89,14 @@ BOOL App::InitInstance()
 	return TRUE;
 }
 
+int App::ExitInstance()
+{
+	// Brišemo drugi template
+	if (paintTmpl)
+		delete paintTmpl;
+
+	return CWinApp::ExitInstance();
+}
 
 /////////////////////////////////////////////////////////////////////////////
 // CAboutDlg dialog used for App About
@@ -97,14 +106,14 @@ class CAboutDlg : public CDialog
 public:
 	CAboutDlg();
 
-// Dialog Data
-	//{{AFX_DATA(CAboutDlg)
+	// Dialog Data
+		//{{AFX_DATA(CAboutDlg)
 	enum { IDD = IDD_ABOUTBOX };
 	//}}AFX_DATA
 
 	// ClassWizard generated virtual function overrides
 	//{{AFX_VIRTUAL(CAboutDlg)
-	protected:
+protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
 	//}}AFX_VIRTUAL
 
@@ -145,17 +154,16 @@ void App::OnAppAbout()
 /////////////////////////////////////////////////////////////////////////////
 // App message handlers
 
-void App::OnNewPaintView() 
+void App::OnNewPaintView()
 {
 	CMDIChildWnd* pActiveChild = static_cast<CMDIFrameWnd*>(m_pMainWnd)->MDIGetActive();
 	if (pActiveChild == NULL) return;
 
 	CDocument* pDocument = pActiveChild->GetActiveDocument();
-	if(pDocument == NULL)  return;
+	if (pDocument == NULL)  return;
 
 	CFrameWnd* pFrame = paintTmpl->CreateNewFrame(pDocument, pActiveChild);
 	if (pFrame == NULL)  return;
 
 	paintTmpl->InitialUpdateFrame(pFrame, pDocument);
-	
 }

@@ -1,4 +1,4 @@
-// PaintView.cpp : implementation file
+﻿// PaintView.cpp : implementation file
 //
 
 #include "stdafx.h"
@@ -37,6 +37,15 @@ END_MESSAGE_MAP()
 
 void PaintView::OnDraw(CDC* pDC)
 {
+	Doc* pDoc = GetDocument();
+
+	// Crtamo elipsu koristeći koordinate iz dokumenta
+	pDC->Ellipse(pDoc->m_rect);
+}
+
+void PaintView::OnUpdate(CView* pSender, LPARAM lHint, CObject* pHint)
+{
+	Invalidate();
 }
 
 /////////////////////////////////////////////////////////////////////////////
@@ -63,4 +72,3 @@ Doc* PaintView::GetDocument()
 
 /////////////////////////////////////////////////////////////////////////////
 // PaintView message handlers
-
